@@ -71,7 +71,7 @@ const Heading = styled.div`
 
 const H1 = styled.h1`
   font-size: 3rem;
-  color: ${props => !props.light ? "rgb(160, 16, 160)" : "#000"};
+  color: ${props => !props.light ? "papayawhip" : "#000"};
   `;
 
 const P = styled.p`
