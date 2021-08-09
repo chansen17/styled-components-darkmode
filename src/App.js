@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
 import styled from 'styled-components';
-import HogwartsLight from './images/hogwarts-light.png';
-import HogwartsDark from './images/hogwarts-dark.png';
 import Moon from './images/moon.png';
 import Sun from './images/sun.png';
 
@@ -12,7 +10,7 @@ function App() {
 
   const handleToggle = () => {
     setDarkMode(!isDarkMode);
-    console.log(isDarkMode)
+    // console.log(isDarkMode)
   }
 
   return (
@@ -21,7 +19,9 @@ function App() {
         <Heading>
           <H1 light={isDarkMode ? true : false}>Dynamic Styling with Styled-Components</H1>
           <P light={isDarkMode ? true : false}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta error natus at vitae sint qui sapiente impedit rerum commodi fugit ullam repudiandae itaque, saepe fuga facere temporibus excepturi dolore officia?</P>
-          <Toggle light={isDarkMode ? true : false}  onClick={handleToggle}><ThemeImage src={ isDarkMode ? `${Sun}` : `${Moon}` }/></Toggle>
+          <Toggle light={isDarkMode ? true : false}  onClick={handleToggle}>
+            <ThemeImage src={ isDarkMode ? `${Sun}` : `${Moon}` }/>
+          </Toggle>
         </Heading>
       </Container>
     </Page>
@@ -71,7 +71,7 @@ const Heading = styled.div`
 
 const H1 = styled.h1`
   font-size: 3rem;
-  color: ${props => !props.light ? "papayawhip" : "#000"};
+  color: ${props => !props.light ? "rgb(160, 16, 160)" : "#000"};
   `;
 
 const P = styled.p`
