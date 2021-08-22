@@ -6,6 +6,9 @@ import Sun from './images/sun.png';
 
 function App() {
 
+  const defaultDarkTheme =
+    window.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
+  
   const [isDarkMode, setDarkMode] = useState(false);
 
   const handleToggle = () => {
